@@ -7,13 +7,14 @@ class StatusController < ApplicationController
   end
 
   def create
-    @status = @documentation.status.build(review_params)
+    @status = @adocumentation.status.build(review_params)
+
     @status.user = current_user
 
     if @status.save
       redirect_to documentations_path, notice: 'Application created successfully'
     else
-      render '../documentations/show'
+      render 'documentation/show'
     end
   end
 

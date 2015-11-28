@@ -4,14 +4,13 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by(email: params[:email])
-    if user && user.authenticate(params[:password])
+    if user && User.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to '../sessions/new', notice: "Logged In!"
+      redirect_to '/documenations', notice: "Logged In!"
     else
       flash.now[:alert] = "Invalid email or password"
       render "new"
     end
-  endd
   end
 
   def destroy
