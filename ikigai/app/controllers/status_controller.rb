@@ -6,13 +6,13 @@ class StatusController < ApplicationController
   end
 
   def create
-    @status = @application.status.build(review_params)
+    @status = @adocumentation.status.build(review_params)
     @status.user = current_user
 
     if @status.save
-      redirect_to applications_path, notice: 'Application created successfully'
+      redirect_to documentations_path, notice: 'Application created successfully'
     else
-      render 'application/show'
+      render 'documentation/show'
     end
   end
 
@@ -23,10 +23,10 @@ class StatusController < ApplicationController
 
   private
   def status_params
-    params.require(:status).permit(:comment, :application_id)
+    params.require(:status).permit(:comment, :documentation_id)
   end
 
   def load_application
-    @application = Application.find(params[:application_id])
+    @documentation = Documentation.find(params[:documentation_id])
   end
 end

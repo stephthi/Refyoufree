@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
   root 'users#new'
 
+  post '/users' => 'documenations#new'
+  get '/documentations' => 'documentations#index'
+
   resources :users, only: [:new, :create, :destroy, :show]
   resources :sessions, only: [:new, :create, :destroy]
-  resources :documentations, only: [:show, :create, :destroy]
+  resources :documentations, only: [:index, :show, :create, :destroy]
 
   resources :users do
     resources :statuses, only: [:show, :create, :destroy]
+    resources :documentations, only: [:index, :show, :create, :destroy]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
