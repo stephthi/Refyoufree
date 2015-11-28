@@ -1,16 +1,21 @@
-<<<<<<< HEAD
 <h3>Documentation</h3>
 
-<%= form_for @documentation do |f| %>
-  <p>
-    <%= f.text_field_tag :search, params[:search] %>
-    <%= f.submit_tag "Search", :name => nil %>
-  </p>
+<% if current_user %>
+  <%= form_for documentations_url do |f| %>
+
+    <%= f.hidden_field :user_id %>
+
+    <div class="field">
+      <%= f.label :text, "1. What is your name?" %><br />
+      <%= f.text_field :text%>
+    </div>
+
+    <div class="field">
+      <%= f.label :text, "2. Where are you located?" %><br />
+      <%= f.text_field :text%>
+    </div>
+
+    <div class="actions"><%= submit_tag "Apply Now" %>
+    </div>
+  <% end %>
 <% end %>
-=======
-<p id="notice"><%= notice %></p>
-
-<h1>Documentation</h1>
-
->>>>>>> documentation
-

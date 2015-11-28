@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   post '/users' => 'documenations#new'
   get '/documentations' => 'documentations#index'
 
-
   resources :users, only: [:new, :create, :destroy, :show]
   resources :sessions, only: [:new, :create, :destroy]
   resources :documentations, only: [:new, :index, :show, :create, :destroy]

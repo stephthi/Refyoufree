@@ -1,5 +1,5 @@
 <% if current_user %>
-  <%= form_for(@documentation) do |f| %>
+  <%= form_for documenations_url do |f| %>
 
     <% if @documentation.errors.any? %>
       <div id="error_explanation">

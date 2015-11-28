@@ -1,34 +1,20 @@
 <h3>Documentation</h3>
 
-<% if current_user %>
-  <%= form_for(@documentation) do |f| %>
-
-    <% if @documentation.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@documentation.errors.count, "error") %> Error. </h2>
-
-        <ul>
-        <% @documentation.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-        </ul>
-      </div>
-    <% end %>
+  <%= form_for documentations_url do |f| %>
 
     <%= f.hidden_field :user_id %>
 
     <div class="field">
-      <%= f.label :text, "Question 1." %><br />
+      <%= f.label :text, "1. What is your name?" %><br />
       <%= f.text_field :text%>
     </div>
 
     <div class="field">
-      <%= f.label :text, "Question 2." %><br />
+      <%= f.label :text, "2. Where are you located?" %><br />
       <%= f.text_field :text%>
     </div>
 
-    <div class="actions">
-      <%= f.submit %>
+    <div class="actions"><%= submit_tag "Apply Now" %>
     </div>
   <% end %>
-<% end %>
+
