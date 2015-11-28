@@ -1,0 +1,14 @@
+<h3>Current Status</h3>
+
+  <p>Status for <%= @documenation.name %></p>
+
+  <% @documentation.status.each do |review| %>
+    <p>
+      <%= status.comment %>
+      <br>
+      <% if status.user != nil %>
+        <em> by <%= status.user.email %></em>
+        Added on: <%= status.created_at %>
+      <% end %>
+    </p>
+  <% end %>
