@@ -1,4 +1,4 @@
-class DocumentationController < ApplicationController
+class DocumentationsController < ApplicationController
   def index
     @documenation = Documentation.all
   end

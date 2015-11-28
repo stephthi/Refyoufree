@@ -8,11 +8,11 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create, :destroy, :show]
   resources :sessions, only: [:new, :create, :destroy]
-  resources :documentations, only: [:index, :show, :create, :destroy]
+  resources :documentations, only: [:new, :index, :show, :create, :destroy]
 
   resources :users do
     resources :statuses, only: [:show, :create, :destroy]
-    resources :documentations, only: [:index, :show, :create, :destroy]
+    resources :documentations, only: [:new, :index, :show, :create, :destroy]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
