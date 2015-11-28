@@ -9,11 +9,11 @@ class DocumentationsController < ApplicationController
 
   def create
   	@documentation = Documentation.new(documentation_params)
-    @documentation.user = current_user
-    if @documenation.save
+    # @documentation.user = current_user
+    if @documentation.save
   		redirect_to documentations_url, notice: "Your application has been received.."
   	else
-  		redirect_to documentationd_url(@documentation), notice: "Sorry, please try again."
+  		redirect_to documentations_url(@documentation), notice: "Sorry, please try again."
   	end
   end
 
@@ -36,6 +36,7 @@ end
     end
 
     def documentation_params
+      puts params
       params.require(:documentation).permit(:text)
     end
 end

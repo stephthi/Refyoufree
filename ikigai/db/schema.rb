@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151128063322) do
+ActiveRecord::Schema.define(version: 20151128201657) do
 
   create_table "applications", force: :cascade do |t|
     t.string   "text"
@@ -23,6 +23,26 @@ ActiveRecord::Schema.define(version: 20151128063322) do
     t.string   "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "one"
+    t.string   "two"
+    t.string   "three"
+    t.string   "four"
+    t.string   "five"
+    t.string   "six"
+    t.string   "seven"
+    t.string   "eight"
+    t.string   "nine"
+    t.string   "ten"
+    t.string   "eleven"
+    t.string   "twelve"
+    t.string   "thirteen"
+    t.string   "fourteen"
+    t.string   "fifteen"
+    t.string   "xixteen"
+    t.string   "seventeen"
+    t.string   "eighteen"
+    t.string   "nineteen"
+    t.string   "twenty"
   end
 
   create_table "statuses", force: :cascade do |t|
