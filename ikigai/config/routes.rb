@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
 
+  get '/home' => 'static_pages#home'
+
+  get '/faq' => 'static_pages#faq'
 
 
   resources :users, only: [:new, :create, :destroy, :show]
