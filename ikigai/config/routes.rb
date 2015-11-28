@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/home' => 'static_pages#home'
 
   get '/faq' => 'static_pages#faq'
+  get '/status' => 'static_pages#status'
 
 
   resources :users, only: [:new, :create, :destroy, :show]
