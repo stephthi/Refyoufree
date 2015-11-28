@@ -3,7 +3,12 @@ Rails.application.routes.draw do
   root 'users#new'
 
   resources :users, only: [:new, :create, :destroy, :show]
+<<<<<<< Updated upstream
   resources :sessions, only: [:new, :creeate, :destroy]
+=======
+  resources :sessions, only: [:new, :create, :destroy]
+  resources :documentations, only: [:show, :create, :destroy]
+>>>>>>> Stashed changes
 
   resources :users do
     resources :status, only: [:show, :create, :destroy]

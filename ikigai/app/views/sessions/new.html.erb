@@ -1,14 +1,23 @@
 <h1>Log in</h1>
 
+<<<<<<< Updated upstream
+=======
+<% form_for @session do |f| -%>
+>>>>>>> Stashed changes
   <div class="field">
-    <%= label_tag :email %><br/>
-    <%= text_field_tag :email, params[:email] %>
+    <%= f.label_tag :email %></br>
+    <%= f.text_field_tag :email, params[:email] %>
   </div>
   <div class="field">
-    <%= label_tag :password %><br/>
-    <%= password_field_tag :password %>
+    <%= f.label_tag :password %></br>
+    <%= f.password_field_tag :password %>
   </div>
+<<<<<<< Updated upstream
   <div class="actions"><%= submit_tag "Log in" %></div>
+=======
+  <div><%= f.submit %></div>
+<% end -%>
+>>>>>>> Stashed changes
 
 <p>
 Don't have an account?

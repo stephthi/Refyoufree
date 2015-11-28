@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
 	def new
+    @session=Session.new
   end
 
   def create
@@ -10,6 +11,10 @@ class SessionsController < ApplicationController
     else
       render "new"
     end
+<<<<<<< Updated upstream
+=======
+  
+>>>>>>> Stashed changes
   end
 
   def destroy
