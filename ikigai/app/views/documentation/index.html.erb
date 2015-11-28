@@ -1,9 +1,9 @@
 <h3>Documentation</h3>
 
-<%= form_tag documentation_path, :method => 'get' do %>
+<%= form_for @documentation do |f| %>
   <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
+    <%= f.text_field_tag :search, params[:search] %>
+    <%= f.submit_tag "Search", :name => nil %>
   </p>
 <% end %>
 

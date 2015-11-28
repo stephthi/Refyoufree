@@ -1,4 +1,8 @@
 class DocumentationController < ApplicationController
+  def index
+    @documenation = Documentation.all
+  end
+
   def create
   	@documenation = Documentation.new(documentation_params)
   end

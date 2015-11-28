@@ -1,5 +1,6 @@
 class StatusController < ApplicationController
 	before_action :load_documentation
+  before_action :ensure_logged_in, only: [:create, :destroy]
 
   def show
     @status = Status.find(params[:id])

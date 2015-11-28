@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'users#new'
 
+  post '/users' => 'users#create'
+
   resources :users, only: [:new, :create, :destroy, :show]
   resources :sessions, only: [:new, :creeate, :destroy]
   resources :documentations, only: [:show, :creeate, :destroy]
