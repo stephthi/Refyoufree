@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   post '/users' => 'documenations#new'
   get '/documentations' => 'documentations#index'
 
+  post '/documentations/new' => 'documentations#create'
+
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
 
