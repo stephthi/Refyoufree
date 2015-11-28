@@ -1,8 +1,10 @@
 class DocumentationController < ApplicationController
   def create
+  	@documenation = Documentation.new(documentation_params)
   end
 
   def destroy
+    @documentation.destroy
   end
 
   def show
@@ -13,3 +15,9 @@ class DocumentationController < ApplicationController
   end
 end
 
+private
+
+def documentation_params
+	params.require(:documentation).permit(:text)
+ end
+end
