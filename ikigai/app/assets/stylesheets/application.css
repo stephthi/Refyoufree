@@ -152,7 +152,9 @@ input[type=submit] {
 
 .lt-ie9 {
   input[type=text], input[type=password] { line-height: 34px; }
-}
+
+
+
 
 
 .form-signin {
