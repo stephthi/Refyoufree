@@ -2,61 +2,29 @@
 <html>
 <head>
   <title>Ikigai</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+   <link rel="icon" type="image/png" href="/icon.png" sizes="16x16">
   <%= csrf_meta_tags %>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-
-</head>
-<body>
-
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!--<a class="navbar-brand" imgscr="ikigai.png" href="#">Start Bootstrap</a>-->
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                  <li>
-                    <img src="ikigai.png"  width="555px" height="100px"/>
-                  </li>
-                    <li>
-                        <a href="#">Applications</a>
-                    </li>
-                    <li>
-                        <a href="#">Status</a>
-                    </li>
-                    <li>
-                        <a href="#">FAQ</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Put your page content here! -->
-    
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-</br>
-</br>
-</br></br>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <noscript>
+      <link rel="stylesheet" href="css/skel-noscript.css" />
+      <link rel="stylesheet" href="css/style.css" />
+      <link rel="stylesheet" href="css/style-desktop.css" />
+    </noscript>
 
 
+    <p class="userinfo">
+      <% if current_user %>
+        Signed in as <%= current_user.email %>. <%= link_to "Log Out", session_path("current"), :method => :delete %>
+      <% else %>
+        <%= link_to "Log In", new_session_path %> or <%= link_to "Sign Up", new_user_path %>
+      <% end %>
+    </p>
 
   <% if flash[:notice] %>
     <p id="notice"><%= flash[:notice] %></p>
@@ -67,16 +35,58 @@
     <% flash.discard(:alert) %>
   <% end %>
 
-<%= yield %>
+  </head>
 
-<!--
-<p class="userinfo">
-      <% if current_user %>
-        Signed in as <%= current_user.email %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
-      <% else %>
-        <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
-      <% end %>
-    </p>
--->
+<body>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+ <div class="container">
+  <center><img src="../ikigai.png" width="300" height="130" align="middle"/></center>
+    <div id="header">
+      <div id="nav-wrapper">
+
+        <nav id="nav">
+          <ul>
+            <li class="active"><a href="/sessions/new">Login</a></li>
+            <li><a href="/documentations/new">Application</a></li>
+            <li><a href="/status">Status</a></li>
+            <li><a href="/faq">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+
+<!-- <div id="yieldbody">
+
+
+</div>
+ -->
+<div id="featured">
+<br></br>
+<%= yield %>
+<br></br>
+</div>
+
+
+<div id="footer">
+      <div class="container">
+        <section>
+          <header>
+          <br></br>
+            <h2>Use our mobile app available on iOS.</h2>
+            <span class="byline">Hack Western 2</span>
+            <span class="byline">Ikigai 2015</span>
+          </div>
+        </div>
+          </header>
+        </section>
+      </div>
+    </div>
+
+
+
+
 </body>
 </html>
