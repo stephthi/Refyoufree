@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get '/faq' => 'static_pages#faq'
   get '/status' => 'static_pages#status'
 
+  get '/sessions' => 'documentations#create'
+
 
   resources :users, only: [:new, :create, :destroy, :show]
   resources :sessions, only: [:new, :create, :destroy]

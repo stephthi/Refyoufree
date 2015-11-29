@@ -1,7 +1,7 @@
 
 <h1 font color='white' align ="center">Log In</h1>
 
-
+<%= form_for sessions_path do |f|%>
 
 <div class="container">
   <div class="row">
@@ -12,13 +12,13 @@
     <div class="main">
 
             <div class="input-group">
-                 <%= label_tag :email %><br/>
-                <%= text_field_tag :email, params[:email] %>
+                 <%= f.label_tag :email %><br/>
+                <%= f.text_field_tag :email, params[:email] %>
             </div>
 
             <div class="input-group">
-                   <%= label_tag :password %><br/>
-                  <%= password_field_tag :password %>
+                   <%= f.label_tag :password %><br/>
+                  <%= f.password_field_tag :password %>
             </div>
 
           <div class="row">
@@ -26,7 +26,7 @@
                      
                 </div>
                 <div class="col-xs-6 col-md-6 pull-right">
-                  <button type="button" class="btn btn-secondary"><%= submit_tag "Log in" %></button>
+                  <button type="button" class="btn btn-secondary"><%= f.submit %></button>
                 </div>
             </div>
     </div>
@@ -48,16 +48,5 @@
   </div>
 </div>
 
-<%= form_for sessions_path do %>
-  <div class="field">
-    <%= label_tag :email %><br/>
-    <%= text_field_tag :email, params[:email] %>
-  </div>
-  <div class="field">
-    <%= label_tag :password %><br/>
-    <%= password_field_tag :password %>
-  </div>
-
-	<div class="actions"><%= submit_tag "Log in" %></div>
 <% end %>
 
