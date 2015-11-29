@@ -37,7 +37,7 @@ end
 
     def documentation_params
       puts params
-      params.require(:documentation).permit(:one, :two, :three, :four, :five, :six, :seven, :eight, :nine, :ten, :eleven, :twelve, :thirteen, :fourteen, :fifteen, :sixteen, :seventeen, :eighteen, :nineteen, :twenty, :twentyone, :twentytwo, :twentythree, :twentyfour, :twentyfive, :twentysix, :twentyseven, :twentyeight, :twentynine, :thirty, :thirtyone)
+      params.require(:documentation).permit(:one, :two, :three, :four, :five, :six, :seven, :eight, :nine, :ten, :eleven, :twelve, :thirteen, :fourteen, :fifteen, :xixteen, :seventeen, :eighteen, :nineteen, :twenty, :twentyone, :twentytwo, :twentythree, :twentyfour, :twentyfive, :twentysix, :twentyseven, :twentyeight, :twentynine, :thirty, :thirtyone)
     end
 end
 
