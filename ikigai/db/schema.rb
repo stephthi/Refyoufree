@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151128201657) do
+ActiveRecord::Schema.define(version: 20151129013539) do
 
   create_table "applications", force: :cascade do |t|
     t.string   "text"
@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 20151128201657) do
 
   create_table "documentations", force: :cascade do |t|
     t.string   "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "one"
     t.string   "two"
     t.string   "three"
@@ -43,6 +43,18 @@ ActiveRecord::Schema.define(version: 20151128201657) do
     t.string   "eighteen"
     t.string   "nineteen"
     t.string   "twenty"
+    t.string   "twentyone"
+    t.string   "twentytwo"
+    t.string   "twentythree"
+    t.string   "twentyfour"
+    t.string   "twentyfive"
+    t.string   "twentysix"
+    t.string   "twentyseven"
+    t.string   "twentyeight"
+    t.string   "twentynine"
+    t.string   "thirty"
+    t.string   "thirtyone"
+    t.string   "thirtytwo"
   end
 
   create_table "statuses", force: :cascade do |t|
