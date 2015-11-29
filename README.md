@@ -5,4 +5,4 @@
 
 Web application to help refugees complete their documentation.
 
-**Created By:** Stephanie Nguyen, Delerina Hill, Rishabh Saxena and Akshay Kumar.
+**Created By:** Stephanie Nguyen, Rishabh Saxena, Akshay Kumar and Hanyu Xi.
